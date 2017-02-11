@@ -6,8 +6,11 @@ chrome.extension.sendMessage({}, function(response) {
     var regex = /(?:(?:issues?|bugs?|SF|bpo-)(?:\s+id:?)?\s*#?|#)\s*(\d{4,})/gmi;
 
     function replacer(match, p1, offset, string) {
+      // TODO: Use template strings.
       return '<a href="https://bugs.python.org/issue' + p1 + '" class="issue-link">' + match + '</a>';
     }
+
+    // TODO: Move this logic to its own function.
 
     // URL: https://github.com/python/cpython/pull/*/commits/*
     // URL: https://github.com/python/cpython/commit/*
