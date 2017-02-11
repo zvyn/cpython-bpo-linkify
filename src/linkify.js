@@ -3,7 +3,7 @@ chrome.extension.sendMessage({}, function(response) {
   if (document.readyState === "complete") {
     clearInterval(readyStateCheckInterval);
 
-    var regex = /(?:(?:issues?|bugs?|SF)(?:\s+id:?)?\s*#?|#)\s*(\d+)/gmi;
+    var regex = /(?:(?:issues?|bugs?|SF|bpo-)(?:\s+id:?)?\s*#?|#)\s*(\d{4,})/gmi;
 
     function replacer(match, p1, offset, string) {
       return '<a href="https://bugs.python.org/issue' + p1 + '">' + match + '</a>';
