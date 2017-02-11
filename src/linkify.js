@@ -12,15 +12,13 @@ chrome.extension.sendMessage({}, function(response) {
     var commitTitleElm = document.querySelector(".commit-title");
     if (commitTitleElm !== null) {
       var commitTitle = commitTitleElm.innerHTML.trim();
-      var newTitle = commitTitle.replace(regex, replacer);
-      commitTitleElm.innerHTML = newTitle;
+      commitTitleElm.innerHTML = commitTitle.replace(regex, replacer);
     }
 
     var commitDescElm = document.querySelector(".commit-desc");
     if (commitDescElm !== null) {
       var commitDesc = commitDescElm.innerHTML.trim();
-      var newDesc = commitDesc.replace(regex, replacer);
-      commitDescElm.innerHTML = newDesc;
+      commitDescElm.innerHTML = commitDesc.replace(regex, replacer);
     }
 
     // URL: https://github.com/python/cpython/pull/*
