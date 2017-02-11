@@ -9,6 +9,8 @@ chrome.extension.sendMessage({}, function(response) {
       return '<a href="https://bugs.python.org/issue' + p1 + '" class="issue-link">' + match + '</a>';
     }
 
+    // URL: https://github.com/python/cpython/pull/*/commits/*
+    // URL: https://github.com/python/cpython/commit/*
     var commitTitleElm = document.querySelector(".commit-title");
     if (commitTitleElm !== null) {
       var commitTitle = commitTitleElm.innerHTML.trim();
