@@ -2,7 +2,7 @@
   "name": "cpython-bpo-linkify",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "An extension that finds #NNNN annonations and converts them to bugs.python.org links.",
+  "description": "An extension that finds bpo-NNNN annonations and converts them to bugs.python.org links.",
   "homepage_url": "https://github.com/berkerpeksag/cpython-bpo-linkify",
   "content_scripts": [
     {
