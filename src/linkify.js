@@ -22,6 +22,13 @@ chrome.extension.sendMessage({}, function(response) {
       var newDesc = commitDesc.replace(regex, replacer);
       commitDescElm.innerHTML = newDesc;
     }
+
+    // URL: https://github.com/python/cpython/pull/*
+    var prTitleElm = document.querySelector(".gh-header-title");
+    if (prTitleElm !== null) {
+      var prTitle = prTitleElm.innerHTML.trim();
+      prTitleElm.innerHTML = prTitle.replace(regex, replacer);
+    }
   }
   }, 10);
 });
