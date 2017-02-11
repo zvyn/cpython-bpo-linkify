@@ -6,7 +6,7 @@ chrome.extension.sendMessage({}, function(response) {
     var regex = /(?:(?:issues?|bugs?|SF|bpo-)(?:\s+id:?)?\s*#?|#)\s*(\d{4,})/gmi;
 
     function replacer(match, p1, offset, string) {
-      return '<a href="https://bugs.python.org/issue' + p1 + '">' + match + '</a>';
+      return '<a href="https://bugs.python.org/issue' + p1 + '" class="issue-link">' + match + '</a>';
     }
 
     var commitTitleElm = document.querySelector(".commit-title");
