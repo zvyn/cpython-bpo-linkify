@@ -7,7 +7,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/python/cpython-mirror/commit/*"
+        "https://github.com/python/cpython/commit/*",
+        "https://github.com/python/cpython/pull/*"
       ],
       "js": [
         "src/linkify.js"
