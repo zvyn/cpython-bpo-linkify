@@ -1,5 +1,4 @@
-chrome.extension.sendMessage({}, function(response) {
-  var readyStateCheckInterval = setInterval(function() {
+var readyStateCheckInterval = setInterval(function() {
   if (document.readyState === "complete") {
     clearInterval(readyStateCheckInterval);
 
@@ -33,5 +32,4 @@ chrome.extension.sendMessage({}, function(response) {
       prTitleElm.innerHTML = prTitle.replace(regex, replacer);
     }
   }
-  }, 10);
-});
+}, 10);
